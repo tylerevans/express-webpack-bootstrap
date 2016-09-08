@@ -1,0 +1,83 @@
+{
+	"extends": "eslint-config-airbnb",
+	"rules": {
+		// errors
+		"arrow-parens": 2,
+		"arrow-spacing": 2,
+		"id-length": 0,
+		"indent": [2, "tab"],
+		"linebreak-style": [2, "unix"],
+		"new-cap": [2, {
+			"capIsNew": false
+		}],
+		"no-dupe-class-members": 2,
+		"no-magic-numbers": 2,
+		"no-octal": 0,
+    	"no-octal-escape": 0,
+		"no-shadow": 0,
+		"no-undef": 2,
+		"no-useless-concat": 2,
+		"no-use-before-define": [2, "nofunc"],
+		"object-curly-spacing": [2, "always"],
+		"prefer-template": 2,
+		"space-before-function-paren": [2, {
+			"anonymous": "always",
+			"named": "never"
+		}],
+		"space-in-parens": [2, "never"],
+		// warnings
+		"brace-style": [1, "stroustrup"],
+		"padded-blocks": [1, "never"],
+		"quotes": [1, "double", "avoid-escape"],
+		"block-scoped-var": 0,
+		"no-var": 0,
+		"vars-on-top": 0,
+		"func-names": 0,
+		"comma-dangle": 0,
+		"react/react-in-jsx-scope": 0,
+		"react/no-multi-comp": 0,
+		"react/prop-types": [2, {
+			"ignore": ["className", "children", "flux"]
+		}],
+		// React
+		"react/sort-comp": [2, {
+			"order": [
+				"lifecycle",
+				"/^on.+$/",
+				"render",
+				"everything-else"
+			],
+			"groups": {
+				"lifecycle": [
+					"displayName",
+					"propTypes",
+					"contextTypes",
+					"childContextTypes",
+					"defaultProps",
+					"state",
+					"constructor",
+					"getDefaultProps",
+					"getInitialState",
+					"getChildContext",
+					"componentWillMount",
+					"componentDidMount",
+					"componentWillReceiveProps",
+					"shouldComponentUpdate",
+					"componentWillUpdate",
+					"componentDidUpdate",
+					"componentWillUnmount"
+				]
+			}
+		}]
+	},
+	"stage": 0,
+	"plugins": [
+		"react"
+	],
+	"ecmaFeatures": {
+		"jsx": true
+	},
+	"env": {
+		"es6": true
+	}
+}
