@@ -12,7 +12,7 @@ exports.routes = function (app) {
 
 	app.get("/", function (req, res) {
 		res.locals = { headerType: "" };
-		res.render('pages/home', { title: 'Tyler Evans', assets: assets });
+		res.render("pages/home", { title: "Home Page", assets: assets });
 	});
 
 	app.get("*", function (req, res) {

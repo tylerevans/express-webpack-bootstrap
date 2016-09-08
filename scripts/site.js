@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-import "rw-styles";
+import "az-styles";
 import "bootstrap";
 
 $(document).ready(function () {

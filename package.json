@@ -1,32 +1,30 @@
 {
-  "name": "React",
+  "name": "express-webpack-bootstrap",
   "version": "0.0.1",
-  "description": "React Starter Template",
+  "description": "Express Webpack Bootstrap Starter Template",
   "main": "server.js",
   "scripts": {
-    "clean": "rimraf public",
     "build": "webpack --display-chunks --progress",
     "build-once": "npm run build -- --bail",
     "start": "node server.js",
     "prod": "npm run build && node server.js",
-    "watch": "npm run build -- --display-modules --watch",
-    "dist": "npm run build && tar cvzf account.republicwealth.tar.gz public/"
+    "watch": "npm run build -- --display-modules --watch"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/tylerevans/express-webpack-bootstrap"
   },
   "keywords": [
-    "React",
+    "Express",
     "Template",
     "Starter"
   ],
   "author": "Tyler Evans <teva995@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/tylerevans/express-webpack-bootstrap/issues"
   },
-  "homepage": "https://github.com/RepublicWealth/account-portal#readme",
+  "homepage": "https://github.com/tylerevans/express-webpack-bootstrap#readme",
   "devDependencies": {
     "assets-webpack-plugin": "^3.4.0",
     "autoprefixer": "^6.4.1",

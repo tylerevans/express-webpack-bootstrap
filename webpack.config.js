@@ -11,7 +11,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var WebpackErrorNotificationPlugin = require("webpack-error-notification");
 var webpackFailPlugin = function () {
 	this.plugin("done", function (stats) {
-		if (stats.compilation.errors && stats.compilation.errors.length && process.argv.indexOf("--watch") === -1) {
+		if (stats.compilation.errors && stats.compilation.errors.length && process.argv.indexOf("--watch") === -1) { // eslint-disable-line
 			process.on("beforeExit", function () {
 				process.exit(1);
 			});
@@ -91,8 +91,8 @@ module.exports = {
 		extensions: ["", ".js", ".es6", ".jsx"],
 		modulesDirectories: ["node_modules"],
 		alias: {
-			"rw-scripts": SCRIPTS_ROOT,
-			"rw-styles": STYLES_ROOT,
+			"az-scripts": SCRIPTS_ROOT,
+			"az-styles": STYLES_ROOT,
 			"jquery$": "jquery/dist/jquery",
 			"bootstrap$": "bootstrap/dist/js/bootstrap.min"
 		}

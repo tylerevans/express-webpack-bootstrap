@@ -18,25 +18,23 @@ process.on("uncaughtException", function (err) {
 // Expressjs Configuration
 // =======================
 app.use(compress());
-app.use("/assets", express.static(__dirname + "/assets"));
-app.use("/public", express.static(__dirname + "/public"));
+app.use("/assets", express.static(__dirname + "/assets")); // eslint-disable-line
+app.use("/public", express.static(__dirname + "/public")); // eslint-disable-line
 
-hbs.registerPartials(__dirname + "/views/partials");
-hbsutils.registerWatchedPartials(__dirname + "/views/partials");
+hbs.registerPartials(__dirname + "/views/partials"); // eslint-disable-line
+hbsutils.registerWatchedPartials(__dirname + "/views/partials"); // eslint-disable-line
 
 app.set("view engine", "hbs");
-app.set("views", __dirname + "/views");
+app.set("views", __dirname + "/views"); // eslint-disable-line
 app.disable("x-powered-by");
 
 // =======================
 // Routes
 // =======================
-require(__root + "node_scripts/routes/routes").routes(app);
+require(__root + "node_scripts/routes/routes").routes(app); // eslint-disable-line
 
 // =======================
 // Launch Application
 // =======================
 var PORT = 3010;
-app.listen(PORT, function () {
-	// job.start();
-});
+app.listen(PORT);
